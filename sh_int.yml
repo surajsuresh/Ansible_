@@ -1,6 +1,6 @@
 ---
 - name: sh int and ver
-  hosts: routers
+  hosts: all
   gather_facts: false
   tasks:
     - name: Send Command
