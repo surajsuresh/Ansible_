@@ -1,0 +1,12 @@
+---
+  - name: Configure intf
+    cisco.ios.ios_config:
+      lines: |
+        interface loopback1
+        description from_literal_scalar
+        ip address 1.1.1.1 255.255.255.255
+      register: intf_config
+    
+    - name: Print Command Output
+      ansible.builtin.debug:
+        msg: "{{ intf_config }}"
